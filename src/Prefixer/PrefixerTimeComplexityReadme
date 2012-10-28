@@ -1,0 +1,17 @@
+Prefixer Notes:
+Notes:
+
+Please note, due to the way java works with names, you will have to use java Prefixer 
+-r fileName to call the function after you compile. 
+
+For the final step, I did not reduce the items if they were both variables, opting to 
+only reduce steps where both values were numbers.  So items like x - x and x - x / 2 
+stayed the same.  However, items like 4 - 1 will be reduced. I also assume you are giving
+me a valid expression with matched parenthesis. 
+
+Time Complexity:
+
+The time complexity of this current algorithm is O(n).  It is the classic shunting-yard 
+algorithm and is considered linear time because for every element we parse from the item,
+there is a set max number of activities it will do.  Thus, at max, the run time is O(cn)
+c is a constant, which simplifies to O(n).
